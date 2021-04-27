@@ -9,9 +9,9 @@ clone_folder: /home/appveyor/site
 environment:
   HAXELIB_ROOT: /home/appveyor/haxelib
   HAXE_INSTALLDIR: /home/appveyor/haxe
-  SRC_REPO: https://github.com/KadeDev/Kade-Engine.git
+  SRC_REPO: https://github.com/aflacc/ProjectFNF.git
   GITHUB_ACCESS_TOKEN:
-    secure: /iJkmlKYPjeG0o1YoGSpn+NANPJMrCZ6dic5w/12wRiInp+y22kAAXsPkEwBJzHS
+    secure: AYoRbFDfZVEdfVVzZFuz5wJXJkAEOOkHtgAweikYp3tqImQUhwg2P6dCjyPxEF7o
 
 install:
   - cd /home/appveyor/site
@@ -45,8 +45,8 @@ build_script:
   - cd /home/appveyor/site
   - git config --global credential.helper store
   - printf "https://$GITHUB_ACCESS_TOKEN:x-oauth-basic@github.com\n" > $HOME/.git-credentials
-  - git config --global user.email "daniel@frosty.gg"
-  - git config --global user.name "daniel11420"
+  - git config --global user.email "mycatisagoodboi@gmail.com"
+  - git config --global user.name "Derpy-Jacob-903"
   - cd /home/appveyor/src
   - haxelib run lime build html5
   - cd /home/appveyor/site
